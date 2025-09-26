@@ -1,0 +1,130 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background: #d4d7a6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header input, header button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* Featured Books full width */
+#featured-books {
+  background: #d4d7a6;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+/* Container for all books */
+#featured-books .book-list {
+    display: flex;             /* arrange children in a row */
+    gap: 20px;                 /* space between books */
+    flex-wrap: wrap;           /* move to next line if screen is small */
+    justify-content: start;    /* align books to the left */
+    margin-top: 20px;
+}
+
+/* Individual book card */
+#featured-books .book {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;             /* fixed width for each card */
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+#featured-books .book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Book cover image */
+#featured-books .book img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Book title */
+#featured-books .book h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+/* Author */
+#featured-books .book p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Button */
+#featured-books .book button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#featured-books .book button:hover {
+    background-color: #005fa3;
+}
+
+
+/* Grid container for search + details */
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal width */
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto 2rem auto;
+}
+
+/* Boxes */
+#search-results, #book-details {
+  background: #d4d7a6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 350px; /* equal height */
+  box-sizing: border-box;
+}
+
+/* Cart/Wishlist centered below */
+#cart-wishlist {
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
+  background: #d4d7a6;
+  padding: 1rem;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+}
+
+/* Admin stays at bottom */
+#admin-page {
+  margin: 2rem auto;
+  width: 80%;
+  background: #d4d7a6;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}

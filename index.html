@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Mini Bookshop</title>
 </head>
 <body>
     <header>
-     <h1>📚 Welcome to Mini Bookshop</h1>
+     <h1>Welcome to Mini Bookshop 📚</h1>
     <input type="text" id="search-bar" placeholder="Search by title or author">
     <button id="search-btn">Search</button>
   </header>
@@ -24,6 +25,7 @@
     </div>
 </section>
 <!-- this room is for the search result -->
+ <div class="two-column-grid">
 <section id="search-results">
     <h2>Search Results</h2>
     <div class="book-list">
@@ -36,27 +38,20 @@
     <h3>Book Title</h3>
     <p><strong>Author:</strong> Author Name</p>
     <p><strong>Description:</strong> Book description goes here...</p>
-    <p><strong>Availability:</strong> In Stock</p>
-    <button id="buynow">Buy right now</button>
-    <button id="buylater">Buy later</button>
   </section>
-<!-- this room is for the cart and wishlist -->
-  <section id="cart-wishlist">
-    <h2>🛒 Your Cart / Wishlist</h2>
-    <div id="cart-items">
-    </div>
-    <button id="checkout">Proceed to buy</button>
-  </section>
+  </div>
+
 <!-- this room is for the admin to add or update books -->
   <section id="admin-page">
     <h2>Admin Panel</h2>
     <form id="add-book-form">
-      <input type="text" placeholder="Book Title" required>
-      <input type="text" placeholder="Author" required>
-      <textarea placeholder="Description"></textarea>
-      <input type="url" placeholder="Cover Image URL">
-      <button type="submit">Add / Update Book</button>
-    </form>
+  <input type="text" id="book-title" placeholder="Book Title" required>
+  <input type="text" id="book-author" placeholder="Author" required>
+  <textarea id="book-description" placeholder="Description"></textarea>
+  <input type="url" id="book-cover" placeholder="Cover Image URL">
+  <button type="submit">Add / Update Book</button>
+</form>
   </section>
+    <script src="script.js"></script>
 </body>
 </html>
