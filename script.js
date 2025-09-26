@@ -139,11 +139,21 @@ function addBookToFeatured(book) {
         <h3>${book.title}</h3>
         <p>by ${book.author_name.join(", ")}</p>
         <button class="view-details-btn">View Details</button>
+        <button class="delete-btn">Delete</button>
     `;
 
+    // View Details
     div.querySelector(".view-details-btn").addEventListener("click", () => {
         showBookDetails(book);
     });
 
+    // Delete book locally
+    div.querySelector(".delete-btn").addEventListener("click", () => {
+        if (confirm(`Are you sure you want to delete "${book.title}"?`)) {
+            div.remove(); // removes from DOM
+        }
+    });
+
     bookList.appendChild(div);
 }
+
